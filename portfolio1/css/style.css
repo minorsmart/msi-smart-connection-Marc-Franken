@@ -14,11 +14,12 @@ body{
 }
 body h1{
 	font-family: 'Raleway', sans-serif;
-			font-style:normal;
-			text-transform:none;
-			letter-spacing:normal;
-			word-spacing:normal;
-			text-align: normal;
+	font: weight 900;
+	font-style:normal;
+	text-transform:none;
+	letter-spacing:normal;
+	word-spacing:normal;
+	text-align: normal;
 }
 
 body h2{
@@ -119,3 +120,36 @@ div.gallery {
 	padding:10px;
 	box-sizing:border-box;
 }
+
+.collapsible-text {
+	background-color: #777;
+	color: white;
+	cursor: pointer;
+	padding: 18px;
+	width: 100%;
+	border: none;
+	text-align: left;
+	outline: none;
+	font-size: 15px;
+  }
+  
+  /*  .active, .collapsible-text:hover {
+	background-color: #555;
+  }*/
+
+  .collapsible-text:after {
+	content: '\002B';
+	color: white;
+	font-weight: bold;
+	float: right;
+	margin-left: 5px;
+  }
+  
+  .content-text {
+	padding: 0 18px;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.2s ease-out;
+	background-color: #f1f1f1;
+  }
+  * {box-sizing:border-box}
