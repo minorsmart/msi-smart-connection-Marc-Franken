@@ -148,15 +148,6 @@ div.gallery {
 	width: 19%;
 	padding: 5px;
   }
-  .column .imagehover {
-	display: none;
-	position: absolute;
-	top: 0;
-	left: 0;
-}
-  .column:hover .imagehover {
-	display: inline;
-}
 
   .row::after {
 	content: "";
