@@ -2,6 +2,7 @@
 	margin:0;
 	padding:0;
 }*/
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap');
 
 body{
 	background-color:#f4f4f4;
@@ -76,6 +77,43 @@ div.gallery {
 
 .clr{
 	clear:both;
+}
+
+.header{
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+	background: #000;
+
+}
+
+.header #bg{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(bg.jpg);
+}
+
+.fade-scroll{
+	position: relative;
+	text-align: center;
+	color: white;
+	size: 300;
+	font-size: 4em;
+	background-color: #000000;
+}
+.centered {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+section{
+	padding: 100px;
 }
 
 .button{
