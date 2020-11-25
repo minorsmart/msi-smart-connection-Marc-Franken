@@ -218,3 +218,21 @@ section{
 	background-color: #f1f1f1;
   }
   * {box-sizing:border-box}
+
+  .overmij-next-to-picture {
+    padding: 50px 0px 0px 150px;
+    overflow: hidden;
+}
+
+.overmij-next-to-picture img {
+    margin-right: 80px;
+    float: left;
+}
+
+.overmij-next-to-picture h3,
+.overmij-next-to-picture p{
+    margin-left: 15px;
+    display: block;
+	margin: 2px 0 0 0;
+	width:90%;
+}
