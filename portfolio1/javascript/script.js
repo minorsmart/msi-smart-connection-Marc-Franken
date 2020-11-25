@@ -49,3 +49,24 @@ function onClick(element) {
   document.getElementById("img01").src = element.src;
   document.getElementById("modal01").style.display = "block";
 }
+
+
+fetch('https://api.covid19api.com/summary')
+ .then(function(resp) { return resp.json() })
+ .then(function(data) {
+        console.log(data);
+        console.log(data.Countries[121].Country);
+        console.log(data.Countries[121].TotalDeaths);
+        console.log(data.Countries[179].Country);
+        console.log(data.Countries[179].TotalDeaths);
+        document.getElementById("land").innerHTML = (data.Countries[121].Country);
+        document.getElementById("datum").innerHTML = (data.Countries[121].Date);
+        document.getElementById("newpositives").innerHTML = (data.Countries[121].NewConfirmed);
+        document.getElementById("totaldeaths").innerHTML = (data.Countries[121].TotalDeaths);
+        document.getElementbyID("landa").innerHTML = (data.Countries[179].Country);
+        document.getElementById("datuma").innerHTML = (data.Countries[179].Date);
+        document.getElementById("newpositivesa").innerHTML = (data.Countries[179].NewConfirmed);
+        document.getElementById("totaldeathsa").innerHTML = (data.Countries[179].TotalDeaths);
+    })
+    .catch(function()   {
+    });
