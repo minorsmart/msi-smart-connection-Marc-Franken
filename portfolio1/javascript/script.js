@@ -23,7 +23,7 @@ $(function(){
         fadeElem.each(function(){
           var $this = $(this),
           elemOffsetTop = $this.offset().top;
-          if (currScrollPos > elemOffsetTop) $this.css('opacity', 1 -(currScrollPos-elemOffsetTop)/1300);
+          if (currScrollPos > elemOffsetTop) $this.css('opacity', 1 -(currScrollPos-elemOffsetTop)/800);
 
         });
     });
@@ -44,3 +44,8 @@ $(function(){
         });
     });
 });
+
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+}
