@@ -105,6 +105,15 @@ div.gallery {
 	font-size: 4em;
 	background-color: #000000;
 }
+
+.fade-scroll-banner{
+	position: relative;
+	text-align: center;
+	color: white;
+	size: 300;
+	font-size: 4em;
+	background-color: #000000;
+}
 .centered {
 	position: absolute;
 	top: 50%;
