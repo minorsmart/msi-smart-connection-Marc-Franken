@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Covid-19 API</title>
+    <title>Weather API</title>
     
 
     <meta charset="UTF-8">
@@ -9,8 +9,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,900" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/styleweatherapi.css">
 	<link href="https://fonts.googleapis.com/css2?family=Inter&family=Raleway:wght@900&display=swap" rel="stylesheet">
 
 </head>
@@ -35,9 +35,9 @@
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="sstart.html">Smart Start</a>
                 <a class="dropdown-item" href="sbusiness.html">Smart Business</a>
-				        <a class="dropdown-item" href="stechnology.html">Smart Technology</a>
-				        <a class="dropdown-item" href="sconnection.html">Smart Connection</a>
-			        	<a class="dropdown-item" href="sproject.html">Smart Project</a>
+			    <a class="dropdown-item" href="stechnology.html">Smart Technology</a>
+				<a class="dropdown-item" href="sconnection.html">Smart Connection</a>
+			    <a class="dropdown-item" href="sproject.html">Smart Project</a>
 			  </div>
 			  <li class="nav-item">
 				<a class="nav-link" href="overige.html">Overige</a>
@@ -45,34 +45,64 @@
           </ul>
         </div>
       </nav>
+    </head>
 
-      <h1>
-        Covid-19 numbers in the
-        <div id="land"></div>
-        </h1>
-        Datum Nederland
-        <div id="datum"></div>
-        Nieuwe positieve Nederland
-        <div id="newpositives"></div>
-        Totale doden Nederland
-        <div id="totaldeaths"></div>
-        <br>
-        Covid-19 numbers in the 
-        <div id="landa"></div>
-        </h1>
-        Datum Amerika
-        <div id="datuma"></div>
-        Nieuwe positieve Amerika
-        <div id="newpositivesa"></div>
-        Totale doden Amerika
-        <div id="totaldeathsa"></div>
+    <input type="button" value="Terug naar Connection" onclick="history.back(-1)" class="button">
 
+    <div class="container">
+        <h1>
+        Het weer in Nijmegen</h1>
+      <div id="weather">
+        <div id="description"></div>
+        <h1 id="temp"></h1>
+        <div id="location"></div>
+      </div>
+
+    </div>
+      
+      <script lang="text/javascript">
+        // future javascript
+    
+        function weatherBalloon( cityID ) {
+        var key = '268716b48c01acdb95b3912760c4fb12';
+        fetch('https://api.openweathermap.org/data/2.5/weather?id=' + cityID+ '&appid=' + key)  
+        .then(function(resp) { return resp.json() }) // Convert data to json
+        .then(function(data) {
+            drawWeather(data); // Call drawWeather
+        })
+        .catch(function() {
+            // catch any errors
+        });
+    }
+    
+    window.onload = function() {
+      weatherBalloon( 2750052 );
+    }
+    
+    function drawWeather( d ) {
+        var celcius = Math.round(parseFloat(d.main.temp)-273.15);
+        var fahrenheit = Math.round(((parseFloat(d.main.temp)-273.15)*1.8)+32); 
+        var description = d.weather[0].description;
+        
+        document.getElementById('description').innerHTML = description;
+        document.getElementById('temp').innerHTML = celcius + '&deg;';
+        document.getElementById('location').innerHTML = d.name;
+        
+        if( description.indexOf('rain') > 0 ) {
+          document.body.className = 'rainy';
+      } else if( description.indexOf('cloud') > 0 ) {
+          document.body.className = 'cloudy';
+      } else if( description.indexOf('sunny') > 0 ) {
+          document.body.className = 'sunny';
+      }
+    }
+      </script>
 
       
         <!-- FOR BOOTSTRAP -->
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    	<script src="javascript/script.js"> </script>
+    		<script src="javascript/script.js"> </script>
 </body>
 </html>
