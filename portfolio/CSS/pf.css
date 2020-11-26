@@ -1,0 +1,239 @@
+header ul{
+    margin:0;
+    padding:0;
+}
+
+header li{
+    float: left;
+    display: inline;
+    padding: 0;
+    padding-left:3px;
+    padding-top:10px;
+    padding-bottom:10px;
+}
+
+#navbar{
+    background-color: rgb(214, 214, 240);
+    box-shadow: 0px 0px 20px 1px rgba(0,0,0,0.2);
+    position: fixed;
+    float: right;
+    top: 20;
+    width: 67%;
+    padding-top:40px;
+}
+
+#navbar a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 8px;
+    text-decoration: none;
+}
+
+#navbar a:hover {
+    text-decoration:underline;
+}
+
+aside#sidebar{
+    float:right;
+    width:30%;
+    height:100%;
+    margin-top:0;
+    padding-top:0;
+    padding-right:23px;
+}
+
+article#main-col{
+    float:left;
+    width:50%;
+    padding-left:60px;
+}
+
+#main-title{
+    padding-top:30px;
+    color: rgb(34, 34, 80);
+}
+
+#main{
+    padding-top:60px;
+}
+
+.slideshow {
+    width:30%;
+    height:100%;
+    box-sizing: border-box;
+    position: fixed;
+}
+
+.slideshow img {
+    position:absolute;
+    animation:slideshow 21s infinite;
+    opacity:0;
+    widows: 25%;
+    height:100%;
+}
+
+@keyframes slideshow {
+    25%{opacity:1;
+    }
+    45%{
+        opacity:0;
+    }
+}
+
+.slideshow img:nth-child(4){animation-delay:0s;}
+.slideshow img:nth-child(1){animation-delay:7s;}
+.slideshow img:nth-child(2){animation-delay:14s;}
+
+#navbar2{
+    background-color: rgb(214, 214, 240);
+    box-shadow: 0px 0px 20px 1px rgba(0,0,0,0.2);
+    position: fixed;
+    float: right;
+    top: 20;
+    width: 100%;
+    padding-top:40px;
+}
+
+#navbar2 a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 8px;
+    text-decoration: none;
+}
+
+#navbar2 a:hover {
+    text-decoration:underline;
+}
+
+header .current{
+    text-decoration: underline;
+}
+
+article#main-col2{
+    float:center;
+    width:50%;
+    padding-left:60px;
+}
+
+#main-title2{
+    padding-top:30px;
+    color: rgb(34, 34, 80);
+}
+
+#main2{
+    padding-top:60px;
+}
+
+#main3{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 1.3em;
+    color: #fff;
+    text-shadow: .1em .1em 0 rgba(0,0,0,0.3);
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to right top, #99bbcb, #a5c7d7, #b1d4e2, #bde0ee, #c9edfa);
+    float:center;
+    width:65%;
+    padding-left:20px;
+}
+     
+#main-title3{
+        margin: 0 auto;
+        color: #fff;
+        font-size: 60px;
+}
+
+#main-col3{
+    body.sunny {
+        background-image: linear-gradient(to right top, #ff4e50, #ff713e, #ff932b, #ffb41d, #f9d423);
+    }
+    body.cloudy {
+        background-image: linear-gradient(to right top, #63747c, #71858e, #7f96a0, #8da8b2, #9bbac5);
+    }
+    body.rainy {
+        background-image: linear-gradient(to right top, #637c7b, #718e8c, #7ea09e, #8db2b0, #9bc5c3);
+    }
+}
+
+#main3a{
+    padding-top:10px;
+}
+
+#main-title3a{
+    padding-top:30px;
+    color: rgb(34, 34, 80);
+}
+
+.single-blog{
+    box-shadow:0px 0px 20px 1px rgba(0,0,0,0.2);
+    padding:10px;
+    margin-top:30px;
+    background-color:#fff;
+  }
+
+.single-blog img{
+    width:100%;
+  }
+
+.blog-meta{
+    font-size:14px;
+    margin-bottom:2px;
+  }
+
+.single-blog span{
+    float:right;
+    font-size:12px;
+    color:grey;
+  }
+
+.blog-text{
+    font-size:14px;
+    text-align:justify;
+  }
+
+.single-blog h2{
+    margin-top:10px;
+    font-size:16px;
+    color:black;
+  }
+
+.single-blog a{
+    text-decoration:none;
+  }
+
+.go-back-btn{
+    background-image: linear-gradient(to right, #6b0294, #b62ff5);
+    padding: 5px 12px 8px;
+    border-radius: 20px;
+    line-height: 20px;
+    font-size: 14px;
+    color: #fff;
+    border: none! important;
+  }
+
+.go-back-btn:hover{
+    background-image: linear-gradient(to right, #640037, #b10085);
+    text-decoration: none;
+    color: #fff;
+  }
+
+.go-forward-btn{
+    background-image: linear-gradient(to right, #6b0294, #b62ff5);
+    padding: 5px 12px 8px;
+    border-radius: 20px;
+    line-height: 20px;
+    font-size: 14px;
+    color: #fff;
+    border: none! important;
+  }
+
+.go-forward-btn:hover{
+    background-image: linear-gradient(to right, #640037, #b10085);
+    text-decoration: none;
+    color: #fff;
+  }
