@@ -1,0 +1,301 @@
+/*{
+	margin:0;
+	padding:0;
+}*/
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap');
+
+body{
+	background-color:#f4f4f4;
+	color: rgb(0, 0, 0);
+	font-size:16px;
+	font-weight: normal;
+	font-family: 'Inter', sans-serif, fantasy;
+	line-height:1.44em;
+	margin:0;
+}
+body h1{
+	font-family: 'Raleway', sans-serif;
+	font: weight 900;
+	font-style:normal;
+	text-transform:none;
+	letter-spacing:normal;
+	word-spacing:normal;
+	text-align: normal;
+}
+
+body h2{
+	font-family: 'Raleway', sans-serif;
+	font-size: 30px;
+}
+
+body h3 {
+	font-family: sans-serif;
+	font-size: 25px;
+
+}
+a{
+	text-decoration:none;
+	color:#000;
+
+}
+
+a:hover{
+	color:red;
+}
+
+a:active{
+	color:black;
+}
+
+div.gallery {
+	margin: auto;
+	margin-top: 10px;
+	border: 1px solid #ccc;
+	width: 50%;
+	display: block;
+  }
+  
+  div.gallery:hover {
+	border: 1px solid #777;
+	opacity: 95%;
+  }
+  
+  div.gallery img {
+	width: 100%;
+	height: auto;
+  }
+  
+  div.desc {
+	padding: 15px;
+	text-align: center;
+  }
+
+.container{
+	width:80%;
+	margin:auto;
+}
+
+.clr{
+	clear:both;
+}
+
+.header{
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+	background: #000;
+
+}
+
+.header #bg{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(bg.jpg);
+}
+
+.fade-scroll{
+	position: relative;
+	text-align: center;
+	color: white;
+	size: 300;
+	font-size: 4em;
+	background-color: #000000;
+}
+
+.fade-scroll-banner{
+	position: relative;
+	text-align: center;
+	color: white;
+	size: 300;
+	font-size: 4em;
+	background-color: #000000;
+}
+.centered {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+section{
+	padding: 100px;
+}
+
+.button{
+	background-color:#333;
+	color:#fff;
+	padding:10px 15px;
+	border:none;
+}
+
+.box-1{
+
+	margin:20px 0;
+}
+
+.box-1 h1{
+	font-family: 'Raleway', sans-serif;
+	font: weight 900;
+	font-style:normal;
+	text-transform:none;
+	letter-spacing:normal;
+	word-spacing:normal;
+	text-align: normal;
+}
+
+.box-1 p{
+	text-align:normal;	
+}
+
+.box-2 h1{
+	font-family: 'Raleway', sans-serif;
+	font: weight 900;
+	font-style:normal;
+	text-transform:none;
+	letter-spacing:normal;
+	word-spacing:normal;
+	text-align: normal;
+}
+
+.box-2 p{
+	text-align:normal;
+	font-family: 'Inter', fantasy;
+}
+
+.block{
+	float:left;
+	width:33.3%;
+	border:1px solid #ccc;
+	padding:10px;
+	box-sizing:border-box;
+}
+
+.collapsible-text {
+	background-color: #777;
+	color: white;
+	cursor: pointer;
+	padding: 18px;
+	width: 100%;
+	border: none;
+	text-align: left;
+	outline: none;
+	font-size: 15px;
+  }
+  
+  /*  .active, .collapsible-text:hover {
+	background-color: #555;
+  }*/
+
+  .column {
+	float: left;
+	width: 19%;
+	padding: 5px;
+  }
+
+  .row::after {
+	content: "";
+	clear: both;
+	display: table;
+  }
+
+  .collapsible-text:after {
+	content: '\002B';
+	color: white;
+	font-weight: bold;
+	float: right;
+	margin-left: 5px;
+  }
+  
+  .content-text {
+	padding: 0 18px;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.2s ease-out;
+	background-color: #f1f1f1;
+  }
+  * {box-sizing:border-box}
+
+  .overmij-next-to-picture {
+    padding: 50px 0px 0px 150px;
+    overflow: hidden;
+}
+
+.overmij-next-to-picture img {
+	margin-right: 80px;
+	margin-bottom: 10px;
+    float: left;
+}
+
+.overmij-next-to-picture h3,
+.overmij-next-to-picture p{
+    margin-left: 15px;
+    display: block;
+	margin: 2px 0 0 0;
+	width:90%;
+}
+
+.column-overige {
+	float: left;
+	width: 19%;
+	padding: 3px;
+	border: 10px;
+}
+
+.single-blog{
+	box-shadow: 0px 0px 20px 1px rgba(0,0,0,0.2);
+	padding: 10px;
+	margin-top: 30px;
+	background-color: #fff;
+}
+
+.single-blog img{
+	width: 100%;
+}
+
+.blog-meta{
+	font-size: 14px;
+	margin-bottom: 2px;
+}
+
+.single-blog span{
+float: right;
+font-size: 12px;
+color: cornflowerblue;
+}
+
+.blog-text{
+	font-size: 14px;
+	text-align: justify;
+	font-family: 'Inter', sans-serif, fantasy;
+}
+
+.single-blog h2{
+	margin-top: 10px;
+	font-size: 16px;
+	color: #007bff;
+	font-family: 'Raleway', sans-serif;
+	}
+
+.single-blog h2 a{
+	text-decoration: none;
+}
+
+.read-more-btn{
+	background-image: linear-gradient(to right, #1c03b5, #5c8bef);
+	padding: 5px 12px 8px;
+	border-radius: 20px;
+	line-height: 20px;
+	font-size: 14px;
+	color: #fff;
+	border: none!important;
+}
+
+.read-more-btn:hover{
+	background-image: linear-gradient(to right, #006417, #00b128);
+	text-decoration: none;
+	color: #fff;
+}
