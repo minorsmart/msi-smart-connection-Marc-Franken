@@ -50,4 +50,25 @@ function onClick(element) {
   document.getElementById("modal01").style.display = "block";
 }
 
+(function newFact() {
+  var facts = ['Alone we can do so little; together we can do so much. – Helen Keller', 
+  'If everyone is moving forward together, then success takes care of itself. – Henry Ford', 
+  'Many ideas grow better when transplanted into another mind than the one where they sprang up. – Oliver Wendell Holmes ',
+  'If I have seen further, it is by standing on the shoulders of giants. – Isaac Newton',
+  'It is the long history of humankind (and animal kind, too) that those who learned to collaborate and improvise most effectively have prevailed. – Charles Darwin',
+  'Talent wins games, but teamwork and intelligence win championships." – Michael Jordan',
+  'Individually, we are one drop. Together, we are an ocean. - Ryunosuke Satoro',
+  'Not finance, not strategy. Not technology. It is teamwork that remains the ultimate competitive advantage, both because it is so powerful and rare. - Patrick Lencioni',
+  'Surround yourself with a trusted and loyal team. It makes all the difference. - Alison Pincus',
+  'Tough times don’t last. Tough teams do. - Robert Schuller',
+  '"None of us is as smart as all of us. - Ken Blanchard',
+  'The bigger the dream, the more important to the team. - Robin Sharma'];
+  var randomFact = Math.floor(Math.random() * facts.length);
+  document.getElementById('factDisplay').innerHTML = facts[randomFact];
+})();
 
+
+
+function goBack() {
+  window.history.back();
+}
