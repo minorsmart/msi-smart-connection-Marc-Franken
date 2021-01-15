@@ -45,7 +45,6 @@
           </ul>
         </div>
       </nav>
-      <input type="button" value="Terug naar Connection" onclick="history.back(-1)" class="button">
       <div class="container">
       <h1>
         Covid-19 numbers in the<div id="land"></div>
@@ -62,6 +61,11 @@
         <div id="totaldeaths"></div>
         <br>
 
+        Nieuwe doden
+        <div id="nieuw"></div>
+        <br>        <br>        <br>
+        <button class="read-more-btn" onclick="goBack()">Pagina terug</button>
+
         <script lang="text/javascript">
             fetch('https://api.covid19api.com/summary')
             .then(function(resp) { return resp.json() })
@@ -75,10 +79,7 @@
                 document.getElementById("datum").innerHTML = (data.Countries[121].Date);
                 document.getElementById("newpositives").innerHTML = (data.Countries[121].NewConfirmed);
                 document.getElementById("totaldeaths").innerHTML = (data.Countries[121].TotalDeaths);
-                document.getElementById("land").innerHTML = (data.Countries[121].Country);
-                document.getElementById("datum").innerHTML = (data.Countries[121].Date);
-                document.getElementById("newpositives").innerHTML = (data.Countries[121].NewConfirmed);
-                document.getElementById("totaldeaths").innerHTML = (data.Countries[121].TotalDeaths);
+                document.getElementById("nieuw").innerHTML= (data.Countries[121].NewDeaths);
             })
             .catch(function()   {
             });
