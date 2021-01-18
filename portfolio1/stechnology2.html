@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Feedback? Laat het mij weten!</title>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Raleway:wght@900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="">Mijn portfolio</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="overmij.html">Over mij</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Smart topics
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="sstart.html">Smart Start</a>
+                        <a class="dropdown-item" href="sbusiness.html">Smart Business</a>
+                        <a class="dropdown-item" href="stechnology.html">Smart Technology</a>
+                        <a class="dropdown-item" href="sconnection.html">Smart Connection</a>
+                        <a class="dropdown-item" href="sproject.html">Smart Project</a>
+                    </div>
+                <li class="nav-item">
+                    <a class="nav-link" href="overige.html">Overige</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <br>
+    <div class="container">
+        <div class="box-2">
+            <h2>De Smart Plant</h2>
+            <p>Altijd al een plant willen hebben, alleen je bent bang dat je deze vergeet water te geven waardoor die
+                sterft? Of zou je het niet vergeten, maar heb je er gewoon absoluut geen zin in? Helaas ken ik de
+                problemen (ik denk dat ik ze vergeet water te geven omdat ik er geen zin in heb). Tijdens de smart topic
+                Technology leerde wij hoe wij een automatisch wateringssysteem kunnen bouwen om dit probleem op te
+                lossen!</p>
+            <p>In eerste instantie klinkt dit natuurlijk hartstikke makkelijk, althans, voor mij. Je plaatst toch gewoon
+                een sensor in de grond die het waterniveau meet met een waarde waarna er automatisch water wordt
+                gegeven? In theorie wel. Maar in de praktijk kwam hier natuurlijk veel meer bij kijken. </p>
+
+            <p><b>Les 1: Verkennen</b><br>
+                Gedurende de eerste les zijn wij bezig geweest met het leren van de hardware en software. Met een mooi
+                aangeleverd bakje draadjes, een ‘ESP32’ en nog wat andere componenten, was het aan ons de taak om een
+                beetje wijs te maken uit het hele gebeuren. Het doel? Het laten knipperen van een LED lampje. </p>
+            <img src="pictures/technology/bakjedraadjes.jpg" width="30%"><br><br>
+            <p><b>Les 2: Vochtmeter</b><br>
+                Tijdens de tweede les heb ik geleerd hoe ik de bijgeleverde vochtmeter aan de praat kreeg. Op de
+                afbeelding is te zien dat hier relatief wat gepuzzel voor nodig was om dit voor elkaar te krijgen. Ik
+                heb hier geleerd dat het schrijven van bijbehorende code toch wat moeilijker was dan ik dacht. Zo was ik
+                eens een stukje code vergeten waardoor niets meer werkte, en had ik ergens een waarde te laag gezet
+                waardoor mijn ‘klikker’ (dat blauwe blokje met rood plaatje op de foto) op hol sloeg. Na een paar
+                minuten met een fronsend gezicht te onderzoeken waar het mis ging, vond ik het probleem en heb ik het
+                daadwerkelijk werkend gekregen.
+            <p></p>
+            <img src="pictures/technology/vochtmeter.jpg" width="30%"><br><br>
+
+            <p><b>Les 3-4: Dashboard Blynk app</b><br>
+                Wat zou een smart industry zijn zonder digitaal te kunnen sturen. Nu de sensoren op mijn ESP32 werken
+                werd het tijd deze digitaal aan te sturen. Dat deed ik aan de hand van de Blynk app. Door mijn code
+                dusdanig te schrijven dat deze gegevens ophaalt uit mijn app, kreeg ik de mogelijkheid om vochtigheid te
+                lezen vanaf mijn telefoon en het LED lampje aan te zetten op afstand.</p>
+
+            <p>Erg handig wanneer ik niet bij mijn plant in de buurt ben maar toch wil weten of alles goed gaat.</p>
+
+            <img src="pictures/technology/blynckapp.jpg" width="20%"><br><br>
+            <p><b>Les 5: PCB ontwerpen</b><br>
+                Op de afbeelding van les twee is te zien dat het best een rommeltje kan worden wanneer er veel kabeltjes
+                aangesloten moeten worden. Deze kabeltjes kunnen hierdoor loslaten of zelfs beschadigd raken. Om dit
+                probleem op te lossen heb ik de PCB laten produceren in China. Vóór dit geproduceerd werd, moest ik
+                natuurlijk eerst het ontwerp maken. Dit werd gedaan met het programma Eagle. Binnen Eagle heb je de
+                mogelijkheid om het ontwerp uit te tekenen en vorm te geven. Mijn ontwerp en vormgeving is te zien op
+                bovenstaande afbeeldingen. Vervolgens kreeg ik de daadwerkelijk ontwikkelde PCB in de post thuis
+                geleverd.</p>
+            <img src="pictures/technology/ontwerppcb.jpg" width="30%"><img src="pictures/technology/ontwerppcb2.jpg"
+                width="30%"><img src="pictures/technology/resultaatpcb.jpg" width="30%"><br><br>
+            <p><b>Ontwerpen wateringssysteem</b><br>
+                Het moment waar ik naar heb gewerkt. Het daadwerkelijk in elkaar zetten van het plant wateringssysteem.
+                Samen met Eline en Mirja ben ik gaan solderen. Dit was een leuk maar vooral moeilijk proces omdat het
+                echt belangrijk is dat het juist wordt gedaan; zo mag je bijvoorbeeld niet hebben dat het tin aan elkaar
+                verbonden is omdat je dan kans hebt op kortsluiting.</p>
+            <p>Toen dit voor elkaar was werd het tijd om de code nogmaals te runnen maar dan met de juiste componenten
+                op de juiste plek. Op onderstaande video is te zien dat dit is gelukt. Het doel van het wateringssysteem
+                was dat de vochtsensor meet wanneer de waarde onder een bepaalde threshhold komt waarna de pomp aan gaat
+                en water van een bakje naar de plant gaat. Om dit te demonstreren heb ik het buisje in een ander bakje
+                gedaan. Zoals op het filmpje te zien is, wordt na het activeren van de code een te lage threshhold
+                gemeten waarna het pompje inderdaad aan gaat. Aan het einde van het filmpje is een klik te horen en een
+                lampje te zien. Dit is een indicatie dat het pompje stopt met water geven omdat de vochtmeter voldoende
+                water aangaf.</p>
+            <img src="pictures/technology/solderen.jpg" width="30%"><br>
+            <iframe src="https://player.vimeo.com/video/501895595" width="640" height="360" frameborder="0"
+                allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+
+            <p><b>Reflectie</b><br>
+                Dit project was ver buiten mijn kennisgebied. Nog nooit heb ik iets moeten solderen, in Eagle moeten
+                ontwerpen of met dergelijke hardware te werken. Het was al met al een erg leuk project en ik heb er veel
+                van geleerd, bijvoorbeeld dat het héél belangrijk is dat de code correct is omdat een kleine fout de
+                hele code plat kan leggen (heeft mij veel hoofdpijn opgeleverd). Ook heb ik gezien dat je (met de juiste
+                kennis) best gemakkelijk en erg leuk van alles kunt maken. Wellicht dat ik dit in de toekomst met andere
+                ideeën ga proberen.</p>
+
+
+
+            <br>
+            <button class="read-more-btn" onclick="goBack()">Pagina terug</button>
+            <br>
+            <br>
+        </div>
+    </div>
+    <!-- FOR BOOTSTRAP -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="javascript/script.js"> </script>
+</body>
+
+</html>
