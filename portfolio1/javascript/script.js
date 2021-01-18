@@ -72,3 +72,27 @@ function onClick(element) {
 function goBack() {
   window.history.back();
 }
+
+
+$(document).ready(function(){
+  $('form').submit(function(event){
+       var limit = $('#numberoffacts').val()
+       var proxyUrl = 'https://cors-anywhere.herokuapp.com/'
+       var targetUrl = 'https://catfact.ninja/facts?limit='+limit
+
+       fetch(proxyUrl + targetUrl)
+         .then(response => response.json())
+         .then(responseJSON => {
+           $('#result').html('')
+           $.each(responseJSON.data, function(i, item){
+             $('#result').append('<a href="#" class="list-group-item list-group-item-action text-success">'+item.fact+'</a>');
+           })
+         })
+         .catch(e => {
+             document.getElementById("result").innerHTML = '<h2 class="text-danger"> Something went wrong!</h2>'
+           });
+       // To avoid the page to refresh
+       event.preventDefault();
+
+    })
+});
