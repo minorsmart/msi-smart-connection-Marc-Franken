@@ -74,25 +74,19 @@ function goBack() {
 }
 
 
-$(document).ready(function(){
-  $('form').submit(function(event){
-       var limit = $('#numberoffacts').val()
-       var proxyUrl = 'https://cors-anywhere.herokuapp.com/'
-       var targetUrl = 'https://catfact.ninja/facts?limit='+limit
+var req = new XMLHttpRequest();
+var url = "https://api.nasa.gov/planetary/apod?api_key=9zCEz4AvLoJfF29wHceugg1b8oxxM509TWNF1jUm";
+var api_key = "9zCEz4AvLoJfF29wHceugg1b8oxxM509TWNF1jUm";
 
-       fetch(proxyUrl + targetUrl)
-         .then(response => response.json())
-         .then(responseJSON => {
-           $('#result').html('')
-           $.each(responseJSON.data, function(i, item){
-             $('#result').append('<a href="#" class="list-group-item list-group-item-action text-success">'+item.fact+'</a>');
-           })
-         })
-         .catch(e => {
-             document.getElementById("result").innerHTML = '<h2 class="text-danger"> Something went wrong!</h2>'
-           });
-       // To avoid the page to refresh
-       event.preventDefault();
+req.open("GET", url + api_key);
+req.send();
 
-    })
-});
+req.addEventListener("load", function(){
+	if(req.status == 200 && req.readyState == 4){
+  	var response = JSON.parse(req.responseText);
+    document.getElementById("title").textContent = response.title;
+    document.getElementById("date").textContent = response.date;
+    document.getElementById("pic").src = response.hdurl;
+    document.getElementById("explanation").textContent = response.explanation;
+  }
+})
