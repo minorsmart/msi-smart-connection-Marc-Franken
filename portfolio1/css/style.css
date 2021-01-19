@@ -133,6 +133,14 @@ section{
 	border:none;
 }
 
+.nasafotoomschrijvingtekst{
+	font-size: small;
+}
+
+.nasa-foto{
+	text-align: center;
+}
+
 .box-1{
 
 	margin:20px 0;
