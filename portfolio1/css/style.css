@@ -100,16 +100,16 @@ div.gallery {
 .fade-scroll{
 	position: relative;
 	text-align: center;
-	color: white;
+	color: rgb(255, 255, 255);
 	size: 300;
 	font-size: 4em;
-	background-color: #ffffff;
+	/*background-color: #ffffff;*/
 }
 
 .fade-scroll-banner{
 	position: relative;
 	text-align: center;
-	color: white;
+	color: rgb(255, 255, 255);
 	size: 300;
 	font-size: 4em;
 	background-color: #ffffff;
@@ -120,6 +120,7 @@ div.gallery {
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
+
 
 section{
 	padding: 100px;
